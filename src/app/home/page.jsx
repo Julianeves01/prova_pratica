@@ -1,33 +1,18 @@
 "use client"
-import {useState,  useEffect } from "react"; 
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../home/Home.module.css';
 
 export default function Home() {
-    const [initialLoading, setInitialLoading] = useState(true);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setInitialLoading(false);
-        }, 5000); // carregar 5 segun.
-        return () => clearTimeout(timer);
-    }, []);
 
     return (
         <div className={styles.container}>
-            {initialLoading ? (
-                <div className={styles.loadingGif}>
-                    <Image src="/book-7.gif" alt="Carregando..." width={500} height={500} />
-                </div>
-            ) : (
-                <>
                     <div className={styles.card}>
                         <Image src="/Minha-foto.jpg" alt="Minha foto" className={styles.image} width={200} height={200} priority />
                         <h2 className={styles.name}>Julia Simões Neves</h2>
                         <p>
-                            Olá! Seja bem-vindo(a) ao meu site!
-                            Meu nome é Julia, sou estudante de Desenvolvimento de Sistemas, faço parte da Turma: 2TDS1 juntamente com os docentes: Marcelo Carboni & Thiago Ferreira. Nesse site estou explorando o universo das APIs com um toque bibliotecático. Este projeto usa minha API de Biblioteca para mostrar livros e autores — tudo com um visual divertido e funcional. Abaixo você pode explorar meus projetos, conhecer as linguagens que utilizo, e conferir meu perfil profissional clicando nos ícones abaixo 🚀.
+                        Olá! Seja bem-vindo(a) ao meu site! Meu nome é Julia, sou estudante do curso Desenvolvimento de Sistemas pelo SENAI, e faço parte da Turma: 2TDS1 juntamente com os docentes: Marcelo Carboni & Thiago Ferreira.
+                        Nesse site estou explorando o universo das APIs com um toque bibliotecário. Este projeto usa minha API de Biblioteca para mostrar livros e autores — tudo com um visual divertido e funcional. Abaixo você pode explorar meus projetos, conhecer as linguagens que utilizo, e conferir meu perfil profissional clicando nos ícones abaixo 🚀.
                         </p>
                     </div>
                     <div className={styles.icons}>
@@ -42,8 +27,6 @@ export default function Home() {
                         </a>
                     </div>
                     <Link href="/livros" className={styles.button}>Ver Livros</Link>
-                </>
-            )}
         </div>
     );
 }
