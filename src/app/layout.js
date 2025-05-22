@@ -10,7 +10,7 @@ const font = Roboto ({
 export const metadata = {
     title: "Prova Prática",
     icons: {
-    icon: "/icons/favicon.ico",
+    icon: "/favicon.ico",
   },
     description: "Projeto desenvolvido para a prova prática do curso de Front End",
 

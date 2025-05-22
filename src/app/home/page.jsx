@@ -5,16 +5,25 @@ import Link from 'next/link';
 export default function Home() {
     return (
         <div className={styles.container}>
-            <h1>Julia Simões Neves</h1>
-            <h2>Turma:</h2>
-            <p> 2TDS1 </p>
-            <h3>Instrutores:</h3>
-            <p>Marcelo Carboni</p>
-            <p>Thiago Ferreira</p>
-            <h3>Matéria: Front End</h3>
-            <Image src="/perfil.jpg" alt='Minha Foto' width={150} height={50} className={styles.image} />
+            {}
+            <div className={styles.card}>
+                <Image src="/Minha-foto.jpg" alt="Minha foto" className={styles.image} width={200} height={200} priority />
+                <h2 className={styles.name}>Julia Simões Neves</h2>
+                <p>Olá! Seja bem-vindo(a) ao meu site!
+                Meu nome é Julia, sou estudante de Desenvolvimento de Sistemas, faço parte da Turma: 2TDS1 juntamente com os docentes: Marcelo Carboni & Thiago Ferreira. Nesse site estou explorando o universo das APIs com um toque bibliotecático. Este projeto usa minha API de Biblioteca para mostrar livros e autores — tudo com um visual divertido e funcional. Abaixo você pode explorar meus projetos, conhecer as linguagens que utilizo, e conferir meu perfil profissional clicando nos ícones abaixo 🚀.</p>
+            </div>
+            <div className={styles.icons}>
+            <a href="https://github.com/Julianeves01" target="_blank" rel="noopener noreferrer">
+                <Image src="/github-icon.png" alt="GitHub" className={styles.icon} width={32} height={32}/>
+                </a>
+                <a href="https://instagram.com/julia.s.neves" target="_blank" rel="noopener noreferrer">
+                <Image src="/instagram-icon.png" alt="Instagram" className={styles.icon} width={32} height={32} />
+                </a>
+                <a href="https://www.linkedin.com/in/julia-nevess/" target="_blank" rel="noopener noreferrer">
+                <Image src="/linkedin (1).png" alt="Linkedin" className={styles.icon} width={32} height={32} />
+                </a>
+            </div>
             <Link href="/livros" className={styles.button}>Ver Livros</Link>
         </div>
-
-    );
+    )
 }
