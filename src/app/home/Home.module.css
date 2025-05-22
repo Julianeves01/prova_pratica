@@ -66,3 +66,14 @@
 .icon:hover {
     transform: scale(1.3);
 }
+
+.loadingGif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingGif img {
+    width: 440px;
+    height: 440px;
+}
